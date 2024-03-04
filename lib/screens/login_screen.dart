@@ -3,7 +3,6 @@
 import 'package:flutter/material.dart';
 import 'package:slide_puzzle/core/api_client.dart';
 import 'package:slide_puzzle/utils/validator.dart';
-import 'package:slide_puzzle/screens/home.dart';
 import 'package:slide_puzzle/screens/game_page.dart';
 
 class LoginScreen extends StatelessWidget {
