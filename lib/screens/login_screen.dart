@@ -128,7 +128,7 @@ class LoginScreen extends StatelessWidget {
         // Navigate to GamePage if login success
         Navigator.pushReplacement(
           context,
-          MaterialPageRoute(builder: (context) => GamePage()),
+          MaterialPageRoute(builder: (context) => GamePage(username: usernameController.text)),
         );
       } else {
         ScaffoldMessenger.of(context).showSnackBar(SnackBar(
@@ -139,7 +139,6 @@ class LoginScreen extends StatelessWidget {
     }
   }
 }
-
 
 
         //MaterialPageRoute(builder: (context) => HomeScreen(accessToken: res['accessToken'])),

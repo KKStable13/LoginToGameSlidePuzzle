@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:slide_puzzle/models/model.dart';
 
 class GamePage extends StatefulWidget {
-  const GamePage({Key? key}) : super(key: key);
+  final String username; // เพิ่ม field สำหรับเก็บข้อมูล username
+  const GamePage({Key? key, required this.username}) : super(key: key);
 
   @override
   _GamePageState createState() => _GamePageState();
@@ -113,7 +114,7 @@ class _GamePageState extends State<GamePage> {
       builder: (BuildContext context) {
         return AlertDialog(
           title: const Text('คุณชนะ!!!'),
-          content: Text('จำนวนการเคลื่อนไหว: $moves\nเวลา: ${_stopwatch.elapsed.inSeconds} วินาที'),
+          content: Text('Username: ${widget.username}\nจำนวนการเคลื่อนไหว: $moves\nเวลา: ${_stopwatch.elapsed.inSeconds} วินาที'),
           actions: <Widget>[
             TextButton(
               child: const Text('OK'),
