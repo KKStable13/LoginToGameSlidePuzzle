@@ -1,7 +1,6 @@
 //static final ApiClient _apiClient = ApiClient(); // Declare _apiClient as static
 
 import 'package:flutter/material.dart';
-import 'package:slide_puzzle/core/api_client.dart';
 import 'package:slide_puzzle/utils/validator.dart';
 import 'package:slide_puzzle/screens/game_page.dart';
 
@@ -9,7 +8,7 @@ class LoginScreen extends StatelessWidget {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   final TextEditingController usernameController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
-  static final ApiClient _apiClient = ApiClient(); // Declare _apiClient as static
+
 
   @override
   Widget build(BuildContext context) {
@@ -78,7 +77,7 @@ class LoginScreen extends StatelessWidget {
                           child: ElevatedButton(
                             onPressed: () => _handleLogin(context),
                             style: ElevatedButton.styleFrom(
-                              primary: const Color.fromARGB(255, 255, 177, 50),
+                              backgroundColor: const Color.fromARGB(255, 255, 177, 50),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(10)
                               ),
